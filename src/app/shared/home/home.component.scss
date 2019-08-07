@@ -1,0 +1,247 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+.card {
+    @extend %card;
+}
+
+.card-sitter {
+    margin-top: .5rem;
+    h3 {
+        span {
+            @include typoStyle($openSemiBold, 2rem, 600);
+        }
+    }
+    h4 {
+        @include typoStyle($openSemiBold, 1rem, 600);
+    }
+    h5 {
+        @include typoStyle($openBold, 1rem, 900)
+    }
+    background: $white;
+    border: 0;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(221, 223, 226, 0.3);
+    margin-top: -120px;
+    img {
+        margin: $auto-margin;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+        -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        width: 60%;
+    }
+    .price {
+        color: #707070;
+        @include typoStyle($openSemiBold, 1rem, 600);
+    }
+    p {
+        @include typoStyle($open, .8rem, 200);
+        color: #707070;
+    }
+    .fa-star {
+        color: #FFCC00;
+    }
+    .btn-primary {
+        @extend %secondary-btn;
+    }
+}
+
+.sectionHeadrWhite {
+    @extend %priper-title-with-line;
+}
+
+.sectionHeaderPriper {
+    @extend %white-title-with-line;
+}
+
+.page {
+    margin: 20px auto 5px auto;
+}
+
+header {
+    @include background-img('../../../assets/img/home.png', cover, center, no-repeat);
+    margin-top: -5.1rem;
+    main {
+        padding: 13.5rem 0 !important;
+        h1 {
+            @extend %main-title;
+        }
+        p {
+            @extend %main-paragragh;
+        }
+        .search {
+            width: 40%;
+            height: 4.857rem;
+            position: relative;
+            input {
+                @extend %search-input;
+            }
+            i {
+                color: $primary-color;
+                position: absolute;
+                font-size: 1.3rem;
+                right: 5%;
+                top: 37%;
+            }
+        }
+    }
+}
+
+.result {
+    li {
+        color: red;
+    }
+}
+
+section#work {
+    .card {
+        .card-title {
+            @include typoStyle($open, 1.714rem, 900);
+            color: $priper;
+            text-transform: uppercase;
+        }
+        .card-text {
+            @include typoStyle($openRegualr, 1rem, 500);
+            color: #999;
+        }
+    }
+}
+
+section#profiles {
+    padding: 15.21rem 0;
+    @include background-img('../../../assets/img/profile.png', cover, center, no-repeat);
+    h4 {
+        @include typoStyle($open, 1.1rem, 900);
+        color: $white;
+        margin-top: 5px;
+    }
+    p {
+        @include typoStyle($openRegualr, 1rem, 500);
+        color: #dedede;
+    }
+    .see-more {
+        @include btn;
+        background: $secondary-color;
+        color: $white;
+        @include typoStyle($openBold, 1rem, 900);
+    }
+}
+
+section#services {
+    h3 {
+        @extend %priper-title-without-line;
+    }
+    ul {
+        list-style: none;
+        i {
+            color: $secondary-color;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+section#reviews {
+    padding: 12rem 0;
+    @include background-img('../../../assets/img/review.png', cover, center, no-repeat);
+    position: relative;
+    .card {
+        padding: 2rem 2rem 2rem 9rem;
+        margin-left: 6rem;
+        cursor: pointer;
+        .card-title {
+            @include typoStyle($openSemiBold, 2rem, 900);
+        }
+        .card-text {
+            @include typoStyle($openRegualr, 1.429rem, 500);
+            color: #999999;
+        }
+    }
+    img {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .parent {
+        position: relative;
+        padding: 1.214rem 0;
+    }
+    img {
+        z-index: 5;
+        position: absolute;
+        object-fit: cover;
+        object-position: center right;
+        bottom: 9.5rem;
+        left: 3.25rem;
+        width: 20%;
+    }
+}
+
+section#video {
+    p {
+        @include typoStyle($openRegualr, 1.143rem, 500);
+        color: #999;
+        margin: $auto-margin;
+    }
+    video {
+        width: 53.71rem;
+        height: 30.36rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+    }
+    video[poster] {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    section#reviews {
+        padding: 12rem 0;
+        @include background-img('../../../assets/img/review.png', cover, center, no-repeat);
+        position: relative;
+        .card {
+            padding: 1rem 1rem 0rem 3rem;
+            margin-left: 6rem;
+            cursor: pointer;
+            .card-title {
+                @include typoStyle($openSemiBold, 1rem, 900);
+            }
+            .card-text {
+                @include typoStyle($openRegualr, .8rem, 500);
+                color: #999999;
+            }
+        }
+        .parent {
+            position: relative;
+            padding: 1.214rem 0;
+        }
+        img {
+            z-index: 5;
+            position: absolute;
+            object-fit: cover;
+            object-position: center right;
+            bottom: 44%;
+            left: 3.25rem;
+            width: 16%;
+        }
+    }
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+    border: 2px solid $white !important;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    outline: 0 !important;
+}
+
+.owl-prev span {
+    font-size: 4rem;
+}

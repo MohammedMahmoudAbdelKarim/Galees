@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="container-fluid py-5">
+        <section class="details">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card mb-3 p-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 text-center">
+                                    <img [attr.src]="'http://localhost:8000/get-img/'+this.user?.personalPic" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{this.user?.name}}</h3>
+                                        <p class="address"><i class="fas fa-map-marker-alt mr-2"></i> {{this.user?.address}}</p>
+                                        <p class="card-text"><strong>Age: </strong> {{this.user?.age}}30 years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speciality">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12 row">
+                                            <div class="col-md-3">
+                                                <h5>Gender:</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>{{this.user?.gender}}</p>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <h5>Education:</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>High School Degree</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5>Languages: </h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>Arabic, English</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        .
+                        <div class="row">
+                            <div class="col-12" *ngFor="let review of review">
+                                <div class="review">
+                                    <div class="card mb-3">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="cardRev">
+                                                            <div class="media my-3">
+                                                                <img [attr.src]="'http://localhost:8000/get-img/'+review.personalPic" class="align-self-center mr-3 revImg img-fluid" alt="...">
+                                                                <div class="media-body">
+                                                                    <h5 class="mt-0">{{review.name}}</h5>
+                                                                    <div><span *ngFor="let number of [1,2,3,4,5]"><i class="fas fa-star"
+                                                        *ngIf="number <= review.rate"></i><i class="far fa-star"
+                                                        *ngIf="number > review.rate"></i></span>
+                                                                    </div>
+                                                                    <p class="mb-0">{{review.review}}</p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>

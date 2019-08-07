@@ -1,0 +1,380 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins';
+.page {
+    margin: 20px auto 5px auto;
+}
+
+header {
+    @include background-img('../../../assets/img/profilesheader.png', cover, center, no-repeat);
+    margin-top: -5.1rem;
+    main {
+        padding: 13.43rem 0 17rem 0;
+        h1 {
+            @extend %main-title;
+        }
+        p {
+            @include typoStyle($open, 1rem, 200);
+            color: $white;
+            margin: $auto-margin;
+        }
+        .search {
+            width: 40%;
+            height: 4.857rem;
+            position: relative;
+            input {
+                @extend %search-input;
+            }
+            i {
+                color: $primary-color;
+                position: absolute;
+                font-size: 1.3rem;
+                right: 5%;
+                top: 37%;
+            }
+        }
+    }
+}
+
+.up {
+    position: relative;
+    bottom: 9rem;
+}
+
+.apply {
+    @extend %primary-btn;
+}
+
+.card {
+    margin-top: .5rem;
+    h3 {
+        span {
+            @include typoStyle($openSemiBold, 2rem, 600);
+        }
+    }
+    h4 {
+        @include typoStyle($openSemiBold, 1rem, 600);
+    }
+    h5 {
+        @include typoStyle($openBold, 1rem, 900)
+    }
+    background: $white;
+    border: 0;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(221, 223, 226, 0.3);
+    img {
+        margin: $auto-margin;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+        -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        width: 60%;
+    }
+    .price {
+        color: #707070;
+        @include typoStyle($openSemiBold, 1rem, 600);
+    }
+    p {
+        @include typoStyle($open, .8rem, 200);
+        color: #707070;
+    }
+    .fa-star {
+        color: #FFCC00;
+    }
+    .btn-primary {
+        @extend %secondary-btn;
+    }
+}
+
+.rate {
+    background: 0;
+    border: 0;
+    outline: 0;
+    &:hover {
+        background: rgba(221, 223, 226, 0.3)
+    }
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+    padding-right: 15px;
+}
+
+$input-range-thumb-height: 20px;
+$input-range-tracker-height: 7px;
+$input-range-lower-thumb-color: $priper;
+$input-range-upper-thumb-color: $priper;
+.input-range-container,
+.input-range-container-2 {
+    position: relative;
+    width: 100%;
+    height: $input-range-thumb-height;
+}
+
+.input-range-tracker,
+.input-range-tracker-2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: $input-range-tracker-height;
+    margin-top: -$input-range-tracker-height / 2;
+    border-radius: 10px;
+    background: LightGray;
+    pointer-events: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.input-range-tracker-between,
+.input-range-tracker-between-2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: $input-range-tracker-height;
+    margin-top: -$input-range-tracker-height / 2;
+    border-radius: 10px;
+    background: $priper;
+    pointer-events: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+input[type="range"],
+.exp-upper,
+.exp-lower {
+    appearance: none;
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: transparent;
+    &.display-upper {
+        z-index: 1;
+    }
+}
+
+// Webkit
+input[type="range"]:not(*:root),
+.exp-lower:not(*:root),
+.exp-upper:not(*:root) {
+    pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+.exp-lower::-webkit-slider-runnable-track,
+.exp-upper::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+.exp-lower,
+.exp-upper {
+    &::-webkit-slider-thumb,
+    &::-webkit-media-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        border-radius: 50%;
+        pointer-events: auto;
+    }
+}
+
+input[type="range"] {
+    &::-webkit-slider-thumb,
+    &::-webkit-media-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        border-radius: 50%;
+        pointer-events: auto;
+    }
+}
+
+input[name="range-lower"],
+input[name="range-lower-2"] {
+    &::-webkit-slider-thumb,
+    &::-webkit-media-slider-thumb {
+        background: $input-range-lower-thumb-color;
+    }
+}
+
+input[name="range-upper"],
+input[name="range-upper-2"] {
+    &::-webkit-slider-thumb,
+    &::-webkit-media-slider-thumb {
+        background: $input-range-upper-thumb-color;
+    }
+}
+
+// Firefox
+input[type="range"]::-moz-range-track,
+.exp-lower::-moz-range-track,
+.exp-upper::-moz-range-track {
+    background: transparent;
+}
+
+input[type="range"]::-moz-range-thumb,
+.exp-lower::-moz-range-thumb,
+.exp-upper::-moz-range-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+input[name="range-lower"]::-moz-range-thumb,
+input[name="range-lower-2"]::-moz-range-thumb {
+    background: $input-range-lower-thumb-color;
+}
+
+input[name="range-upper"]::-moz-range-thumb,
+input[name="range-upper-2"]::-moz-range-thumb {
+    background: $input-range-upper-thumb-color;
+}
+
+// Edge
+input[type="range"]::-ms-track,
+.exp-lower::-ms-track,
+.exp-upper::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    z-index: 1;
+}
+
+input[type="range"]::-ms-thumb,
+.exp-lower::-ms-thumb,
+.exp-upper::-ms-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+}
+
+input[name="range-lower"]::-ms-thumb,
+input[name="range-lower-2"]::-ms-thumb {
+    background: $input-range-lower-thumb-color;
+}
+
+input[name="range-upper"]::-ms-thumb,
+input[name="range-upper-2"]::-ms-thumb {
+    background: $input-range-upper-thumb-color;
+}
+
+.checkmark {
+    position: absolute;
+    height: 20px !important;
+    width: 20px !important;
+    border: 1px solid #ddd;
+    border-radius: 25%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+}
+
+.radio input:checked~.checkmark {
+    background: $primary-color !important;
+}
+
+.radio {
+    position: relative;
+    cursor: pointer;
+    @include typoStyle($openRegualr, 1.143rem, 200);
+    user-select: none;
+    color: #707070;
+}
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio input:checked~.checkmark:after {
+    display: flex;
+}
+
+.radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.pagination {
+    border: 2px solid #e7e7e7;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
+    li {
+        a {
+            color: #9D9D9D !important;
+        }
+    }
+}
+
+.page-item.active .page-link {
+    background: $primary-color;
+    color: $white !important;
+}
+
+.price-label {
+    text-align: left;
+    margin-top: 0.75rem;
+    &.min {
+        text-align: right;
+    }
+}
+
+.value-label {
+    position: relative;
+    bottom: -25px;
+    white-space: nowrap;
+    left: -50%;
+    text-shadow: none;
+    transition: text-shadow 100ms ease-in;
+}
+
+.slider-handle {
+    outline: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    &.is-dragging {
+        .valueLabel {
+            text-shadow: 0px 0px 2px gray;
+        }
+    }
+}
+
+ngb-rating {
+    color: #FFCC00;
+    font-size: 2.6rem;
+}

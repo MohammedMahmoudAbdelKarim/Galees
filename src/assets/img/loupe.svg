@@ -1,0 +1,29 @@
+<svg id="loupe" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9c65eb;
+      }
+    </style>
+  </defs>
+  <g id="Group_45" data-name="Group 45" transform="translate(44.531 28.203)">
+    <g id="Group_44" data-name="Group 44">
+      <path id="Path_58" data-name="Path 58" class="cls-1" d="M301.484,190a1.484,1.484,0,1,0,1.484,1.484A1.485,1.485,0,0,0,301.484,190Z" transform="translate(-300 -190)"/>
+    </g>
+  </g>
+  <g id="Group_47" data-name="Group 47">
+    <g id="Group_46" data-name="Group 46">
+      <path id="Path_59" data-name="Path 59" class="cls-1" d="M74.26,65.865,54.447,46.051a29.421,29.421,0,0,0,4.928-16.364A29.688,29.688,0,1,0,29.688,59.375a29.422,29.422,0,0,0,16.364-4.928l5.477,5.477,0,0L65.864,74.26a5.937,5.937,0,1,0,8.4-8.4ZM45.353,51.319h0a26.746,26.746,0,1,1,5.966-5.966A26.848,26.848,0,0,1,45.353,51.319Zm3.114,1.346a29.787,29.787,0,0,0,4.2-4.2l4.211,4.211a36.031,36.031,0,0,1-4.2,4.2Zm23.694,19.5a2.967,2.967,0,0,1-4.2,0L54.783,58.981a39.005,39.005,0,0,0,4.2-4.2L72.162,67.964a2.966,2.966,0,0,1,0,4.2Z"/>
+    </g>
+  </g>
+  <g id="Group_49" data-name="Group 49" transform="translate(5.938 5.938)">
+    <g id="Group_48" data-name="Group 48">
+      <path id="Path_60" data-name="Path 60" class="cls-1" d="M63.75,40A23.75,23.75,0,1,0,87.5,63.75,23.777,23.777,0,0,0,63.75,40Zm0,44.531A20.781,20.781,0,1,1,84.531,63.75,20.8,20.8,0,0,1,63.75,84.531Z" transform="translate(-40 -40)"/>
+    </g>
+  </g>
+  <g id="Group_51" data-name="Group 51" transform="translate(28.203 11.875)">
+    <g id="Group_50" data-name="Group 50">
+      <path id="Path_61" data-name="Path 61" class="cls-1" d="M208.119,91.441A17.84,17.84,0,0,0,191.484,80a1.484,1.484,0,1,0,0,2.969,14.945,14.945,0,0,1,13.863,9.537,1.484,1.484,0,1,0,2.771-1.065Z" transform="translate(-190 -80)"/>
+    </g>
+  </g>
+</svg>

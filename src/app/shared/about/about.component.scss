@@ -1,0 +1,12 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+#about {
+    h3 {
+        color: $primary-color;
+        @include typoStyle($openSemiBold, 1.5rem, 900);
+    }
+    p {
+        color: #707070;
+        @include typoStyle($openRegualr, 1rem, 500);
+    }
+}

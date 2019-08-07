@@ -1,0 +1,77 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets//scss/mixins';
+.navbar {
+    background: $primary-color;
+    box-shadow: none;
+    ul {
+        li {
+            a {
+                @extend %link
+            }
+        }
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .show>.btn-secondary.dropdown-toggle {
+        background: none !important;
+    }
+    .btn-secondary {
+        background: none !important;
+        width: 50%;
+        border: 0;
+    }
+    .btn-secondary:hover {
+        background: none !important;
+    }
+    .btn.focus,
+    .btn:focus {
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active:focus,
+    .btn-secondary:not(:disabled):not(.disabled):active:focus,
+    .show>.btn-secondary.dropdown-toggle:focus {
+        box-shadow: none !important;
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .show>.btn-secondary.dropdown-toggle {
+        background: none !important;
+        border-color: none !important;
+    }
+    .btn-secondary.focus,
+    .btn-secondary:focus {
+        box-shadow: none !important;
+    }
+    .active {
+        &::after {
+            content: "";
+            display: block;
+            background: $secondary-color;
+            width: 100%;
+            height: .2rem;
+            margin: $auto-margin;
+            margin-top: .5rem;
+        }
+    }
+    .login {
+        @include btn;
+        color: $primary-color !important;
+        background: $white;
+    }
+    .dropdown-menu {
+        a {
+            color: #707070;
+            @include typoStyle($openRegualr, 1rem, 500);
+        }
+        i {
+            color: $icon-color;
+        }
+    }
+    #dropdownMenuButton{
+        img{
+            border-radius: 50%;
+            max-width: 60% !important;
+        }
+    }
+}

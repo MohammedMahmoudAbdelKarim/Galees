@@ -1,0 +1,29 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+#subscribe {
+    @include background-img('../../../assets/img/subscribe.png', cover, center, no-repeat);
+    padding: 7rem 0;
+    h3 {
+        @include typoStyle($openExtraBold, 2.5rem, 900);
+        color: $white;
+    }
+    .subscribeAction {
+        position: relative;
+        width: 100%;
+        input {
+            width: 100%;
+            @include border-radius(20px);
+            background: $white;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        button {
+            position: absolute;
+            top: 1%;
+            right: 0;
+            @include border-radius(20px);
+            background: $secondary-color;
+            color: $white;
+            @include typoStyle($openExtraBold, .9rem, 900);
+        }
+    }
+}

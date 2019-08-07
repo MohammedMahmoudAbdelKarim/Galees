@@ -1,0 +1,19 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+#terms {
+    h3 {
+        color: $primary-color;
+        @include typoStyle($openSemiBold, 1.5rem, 900);
+    }
+    h5 {
+        color: $primary-color;
+        @include typoStyle($openSemiBold, 1rem, 900);
+    }
+    p {
+        color: #707070;
+        @include typoStyle($openRegualr, 1rem, 500);
+    }
+    i {
+        color: $primary-color;
+    }
+}

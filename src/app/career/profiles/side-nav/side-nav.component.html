@@ -1,0 +1,17 @@
+<section id="sideNav" class="p-4">
+    <div class="text-center">
+        <img [attr.src]="'http://localhost:8000/get-img/'+sitter.personalPic">
+        <h3>{{sitter.name}}</h3>
+        <p>{{sitter.career}}</p>
+        <hr>
+    </div>
+    <div class="contact">
+        <ul>
+            <li class="my-4"><a routerLink="personal-info" routerLinkActive="active"><i class="far fa-user p-2"></i>Personal Info</a></li>
+            <li class="my-4"><a routerLink="edit-Profile" routerLinkActive="active"><i class="fas fa-pencil-alt p-2 "></i>Edit Profile</a></li>
+            <li class="my-4"><a routerLink="notifications" routerLinkActive="active"><i class="fas fa-bell p-2"></i>Notifications</a><span class="ml-3">{{notificationCount}}</span></li>
+            <li class="my-4"><a routerLink="review" routerLinkActive="active"><i class="fas fa-star p-2 "></i>Reviews</a></li>
+            <li class="my-4"><a routerLink="settings" routerLinkActive="active"><i class="fas fa-cog p-2"></i>Settings</a></li>
+        </ul>
+    </div>
+</section>

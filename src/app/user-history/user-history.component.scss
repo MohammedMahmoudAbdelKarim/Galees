@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+.card-style {
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+
+h5 {
+    @include typoStyle($openBold, 1.5rem, 900);
+    color: $primary-color;
+}
+
+p {
+    @include typoStyle($openBold, 1rem, 900);
+    color: #000;
+    span {
+        @include typoStyle($openRegualr, 1rem, 500);
+    }
+}
+
+.yellow {
+    color: #FFCC00;
+}
+
+.card-body {
+    padding: 2rem 0 !important;
+}
+
+.padding {
+    padding: 1.3rem;
+}
+
+.img-rate {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.card {
+    border: 0;
+}
+
+.font-med {
+    @include typoStyle($openRegualr, 1rem, 400);
+}

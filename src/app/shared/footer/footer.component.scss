@@ -1,0 +1,32 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+footer {
+    background: #F2F2F2;
+    .col-20 {
+        width: 20%;
+        a {
+            color: #888888;
+            text-decoration: none;
+        }
+    }
+    .social-media {
+        .link {
+            cursor: pointer;
+            width: 3.5rem;
+            line-height: 3.5rem;
+            border-radius: 50%;
+            height: 3.5rem;
+            background: #591AB4;
+            font-size: 1.3rem;
+            color: $white;
+            &:hover {
+                background: $white;
+                color: $primary-color;
+            }
+        }
+    }
+    p {
+        @include typoStyle($openRegualr, 1rem, 500);
+        color: $primary-color;
+    }
+}

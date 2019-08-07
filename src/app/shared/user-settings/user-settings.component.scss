@@ -1,0 +1,104 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+#signup {
+    h2 {
+        @extend %priper-title-with-line;
+    }
+    i {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        color: $icon-color;
+    }
+    label {
+        @include typoStyle($openSemiBold, 1rem, 900);
+    }
+    input,
+    select {
+        border-radius: 12px;
+        border: 1px solid #707070;
+        color: #707070;
+        @include typoStyle($openRegualr, 1rem, 500);
+    }
+    .addMore {
+        background: 0;
+        border: 0;
+        outline: 0;
+        @include typoStyle($openRegualr, .8rem, 500);
+        color: $primary-color;
+    }
+    textarea {
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid #707070;
+        height: 8rem;
+        color: #707070;
+        @include typoStyle($openRegualr, 1rem, 500);
+    }
+    .saveChanges {
+        @extend %primary-btn;
+        margin: .5rem auto;
+        border: 0;
+        padding: .5rem 1.2rem;
+    }
+    // Radio Button Style
+    .checkmark {
+        position: absolute;
+        top: 43px !important;
+        left: 2px !important;
+        height: 20px !important;
+        width: 20px !important;
+        @include border(1px, solid, #ddd);
+        border-radius: 25%;
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    .radio input:checked~.checkmark {
+        background: $primary-color !important;
+    }
+    .radio {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;
+    }
+    .labelRadio {
+        margin-top: 1.8rem;
+        margin-left: .5rem;
+        color: #333;
+        @include typoStyle($open, .8rem, 100);
+        position: relative;
+        left: -89px;
+        top: 15px;
+    }
+    .radio:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    .radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .radio input:checked~.checkmark {
+        background-color: #2196F3;
+        &::after {
+            display: flex;
+        }
+    }
+    .radio .checkmark {
+        &::after {
+            top: 5px;
+            left: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    }
+}

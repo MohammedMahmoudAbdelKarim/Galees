@@ -1,0 +1,168 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
+#section#signup {
+    background: $milk;
+}
+
+h2 {
+    @include typoStyle($open, 1.2rem, 900);
+    color: $primary-color;
+    &::after {
+        @extend %line;
+    }
+}
+
+i {
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: $icon-color;
+}
+
+label {
+    color: $primary-color;
+    @include typoStyle($open, .8rem, 500);
+}
+
+mat-checkbox {
+    color: #A9A9A9;
+    @include typoStyle($openRegualr, 1rem, 500);
+}
+
+a {
+    @include typoStyle($openSemiBold, 1rem, 900);
+    color: $priper;
+}
+
+.checkmark {
+    position: absolute;
+    top: 28px !important;
+    left: 18px !important;
+    height: 20px !important;
+    width: 20px !important;
+    border: 1px solid #ddd;
+    border-radius: 25%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+}
+
+.radio input:checked~.checkmark {
+    background: $primary-color !important;
+}
+
+.radio {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.labelRadio {
+    margin-top: 1.8rem;
+    margin-left: .5rem;
+    font-size: .8rem;
+    color: #333;
+    font-family: $open;
+}
+
+
+/* Hide the browser's default radio button */
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.radio input:checked~.checkmark:after {
+    display: flex;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.input-file {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #EBEBEB;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.input-file:hover {
+    background-color: $primary-color;
+}
+
+.input-file [type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input-file label {
+    font-family: $open;
+    color: $primary-color;
+    font-weight: 900;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.input-file:hover label {
+    color: $white;
+}
+
+h6 {
+    @include typoStyle($openSemiBold, .8rem, 900);
+}

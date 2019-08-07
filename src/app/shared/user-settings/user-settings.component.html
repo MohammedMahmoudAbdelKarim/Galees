@@ -1,0 +1,97 @@
+<!-- Start Signup Section -->
+<section id="signup" class="py-5">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+
+                <form [formGroup]="signup" (ngSubmit)="onSubmit(signup)" class="text-center">
+
+                    <div class="row text-left">
+
+                        <div class="col-12 mt-3">
+                            <div class="row align-items-center">
+                                <div class="col-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="fname">First Name</label>
+                                        <input placeholder="First Name" formControlName="fname" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="lname">Last Name</label>
+                                        <input placeholder="Last Name" formControlName="lname" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="row align-items-center">
+                                <div class="col-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="fname">Date of birth</label>
+                                        <div class="d-flex">
+
+                                            <input type="date" formControlName="birthdate" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="d-flex">
+                                            <label class="d-block mt-3">Gender</label>
+                                            <mat-radio-group aria-label="Select an option" *ngFor="let gender of genders">
+                                                <label class="radio"><span class="labelRadio">{{gender}}</span>
+                                                                        <input type="radio" value="{{gender}}" formControlName="gender"
+                                                                            (change)="changeGender(gender)">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                            </mat-radio-group>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+
+                            <label for="loction">Location</label>
+                            <input formControlName="location" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="row align-items-center">
+                                <div class="col-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="fname">Email</label>
+                                        <input placeholder="Email" formControlName="email" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="lname">Phone</label>
+                                        <input placeholder="Phone" formControlName="phone" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="loction">Bio</label>
+                            <textarea formControlName="bio" class="form-control"></textarea>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="loction">Languages</label>
+                            <input formControlName="location" class="form-control">
+                            <div id="languages"></div>
+                            <button class="addMore float-right" (click)="addLanguages()">Add Field</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="saveChanges">Save Changes</button>
+
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Start Footer-->

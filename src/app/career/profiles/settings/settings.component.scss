@@ -1,0 +1,45 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixins';
+// Settings Section
+.settings {
+    .card {
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(221, 223, 226, 0.16);
+        border: 0;
+        h3 {
+            color: $primary-color;
+            @include typoStyle($openSemiBold, 1.4rem, 900);
+        }
+        p {
+            color: $grey;
+            @include typoStyle($openSemiBold, 1.4rem, 900);
+        }
+        label {
+            color: $black;
+            @include typoStyle($openSemiBold, 1rem, 900);
+        }
+        button {
+            @extend %primary-btn;
+            border: 0;
+        }
+        button:disabled {
+            background-color: rgb(150, 133, 175);
+        }
+        .delete {
+            background: #FF1919 !important;
+        }
+        .alert {
+            margin-top: 1rem;
+            font-size: .8rem;
+        }
+        input {
+            width: 100%;
+            padding: .3rem 1.1rem;
+            border-radius: 12px;
+            border: 1px solid #707070;
+            color: #707070;
+            @include typoStyle($openRegualr, 1rem, 500);
+        }
+    }
+}

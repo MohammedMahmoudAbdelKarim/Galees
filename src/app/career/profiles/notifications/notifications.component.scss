@@ -1,0 +1,57 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixins';
+#notifications {
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        border: 0;
+        mat-expansion-panel {
+            padding: 4rem 0;
+            border: 0;
+        }
+        img {
+            margin: $auto-margin;
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+            -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            width: 70%;
+            @include border(3px, solid, $primary-color);
+        }
+        span {
+            @include typoStyle($openRegualr, .8rem, 500);
+            color: #818181;
+        }
+        h5 {
+            @include typoStyle($openBold, 1rem, 900);
+            color: $primary-color;
+        }
+        p {
+            @include typoStyle($openSemiBold, 1rem, 900);
+            color: #A3A3A3;
+        }
+        .mat-expansion-panel-body {
+            h6 {
+                @include typoStyle($openSemiBold, 1rem, 900);
+            }
+            span {
+                @include typoStyle($openRegualr, 1rem, 300);
+                color: #707070;
+            }
+            p {
+                @include typoStyle($openRegualr, 1.1rem, 300);
+                color: #A3A3A3;
+            }
+        }
+        .btn {
+            @extend %primary-btn;
+        }
+    }
+}
+.reject {
+    background: #FF1919 !important;
+}

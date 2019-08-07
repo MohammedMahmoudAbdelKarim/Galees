@@ -1,0 +1,57 @@
+<section id="notifications" class="mt-3">
+    <div class="card">
+        <mat-accordion *ngFor="let result of res">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="p-4">
+                        <div class="row">
+                            <div class="col-3">
+                                <img [attr.src]="'http://localhost:8000/get-img/'+result.personalPic" class="img-fluid" alt="...">
+                            </div>
+                            <div class="col-9 row">
+                                <div class="col-12">
+                                    <span class="m-0">{{result.hoursPerDay}} hours</span>
+                                </div>
+                                <div class="col-12">
+                                    <h5 class="m-0">{{result.name}}</h5>
+                                </div>
+                                <div class="col-12">
+                                    <p> Made a request for you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="mat-expansion-panel-body mt-5">
+                    <div class="row mt-3 align-items-baseline">
+                        <div class="col-6 align-items-baseline">
+                            <h6 class="d-inline-block">From : </h6>
+                            <span class="ml-4">{{result.from}}</span>
+                        </div>
+                        <div class="col-6 align-items-baseline">
+                            <h6 class="d-inline-block">To : </h6>
+                            <span class="ml-4">{{result.to}}</span>
+                        </div>
+                        <div class="col-6 align-items-baseline">
+                            <h6 class="d-inline-block">Num of hrs/day : </h6>
+                            <span class="ml-4">{{result.hoursPerDay}}</span>
+                        </div>
+                        <div class="col-6 align-items-baseline">
+                            <h6 class="d-inline-block">Phone : </h6>
+                            <span class="ml-4">{{result.phone}}</span>
+                        </div>
+                        <div class="col-6 align-items-baseline">
+                            <h6 class="d-inline-block">Address : </h6>
+                            <span class="ml-4">{{result.address}}</span>
+                        </div>
+                    </div>
+                    <p class="my-4">{{result.proposal}}</p>
+                </div>
+                <button class="btn float-right" (click)="accept($event,result)">Accept</button>
+                <button class="btn float-right reject mr-3" (click)="reject($event,result)">Reject</button>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </div>
+
+</section>

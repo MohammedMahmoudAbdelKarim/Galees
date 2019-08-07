@@ -1,0 +1,21 @@
+@import '../../../assets/scss//variables';
+@import '../../../assets/scss/mixins';
+#signup {
+    background: $milk;
+    h2 {
+        @include typoStyle($openBold, 1.5rem, 900);
+        color: $primary-color;
+        &::after {
+            @extend %line;
+        }
+    }
+    i {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        color: $icon-color;
+    }
+    label {
+        color: $primary-color;
+        @include typoStyle($open, .8rem, 500);
+    }
+}

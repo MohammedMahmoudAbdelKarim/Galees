@@ -1,0 +1,91 @@
+<section id="signup" class="py-5">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <img class="img-fluid" src="../../../assets/img/contact.png" alt="signup">
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <h2 class="text-center">Keep in touche with Us</h2>
+                    <!-- Start Form -->
+                    <form [formGroup]="signup" (ngSubmit)="onSubmit(signup)">
+                        <div class="row">
+                            <!-- First Name & Last Name -->
+                            <div class="col-12 mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="col-11 row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <mat-form-field>
+                                                <input matInput placeholder="First Name" formControlName="fname">
+                                            </mat-form-field>
+                                            <mat-hint class="alert alert-danger d-block" *ngIf="signup.controls.fname.touched && signup.controls.fname.errors?.required">
+                                                This field is required</mat-hint>
+                                            <mat-hint class="alert alert-danger" *ngIf="signup.controls.fname.dirty && signup.controls.fname.errors?.pattern">
+                                                Invalid First Name</mat-hint>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <mat-form-field>
+                                                <input matInput placeholder="Last Name" formControlName="lname">
+                                            </mat-form-field>
+                                            <mat-hint class="alert alert-danger d-block" *ngIf="signup.controls.lname.touched && signup.controls.lname.errors?.required">
+                                                This field is required</mat-hint>
+                                            <mat-hint class="alert alert-danger" *ngIf="signup.controls.lname.dirty && signup.controls.lname.errors?.pattern">
+                                                Invalid Last Name</mat-hint>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-12 mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Email" formControlName="email">
+                                        </mat-form-field>
+                                        <mat-hint class="alert alert-danger d-block" *ngIf="signup.controls.email.touched && signup.controls.email.errors?.required">
+                                            This field is required</mat-hint>
+                                        <mat-hint class="alert alert-danger d-block" *ngIf="signup.controls.email.dirty && signup.controls.email.errors?.pattern">
+                                            Invalid Email</mat-hint>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Phone -->
+                        <div class="row">
+                            <!-- Phone -->
+
+                            <div class="col-12 mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fas fa-sticky-note"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput #message maxlength="256" placeholder="Your Message " formControlName="addition">
+                                            <mat-hint align="start" style="color: #591ab4 !important;"><strong>Don't disclose personal info</strong> </mat-hint>
+                                            <mat-hint align="end" style="color: #591ab4 !important;">{{message.value.length}} / 256</mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Birthdate -->
+
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button mat-button type="submit">Send</button>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

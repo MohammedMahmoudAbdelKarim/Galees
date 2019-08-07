@@ -1,0 +1,156 @@
+// Border
+@mixin border($borderWidth, $borderStyle, $borderColor) {
+    border: $borderWidth $borderStyle $borderColor;
+}
+
+//Border-Radius
+@mixin border-radius($radius) {
+    @each $vendor in $vendors {
+        #{$vendor}border-radius: $radius;
+    }
+}
+
+//Box-Shadow
+@mixin box-shadow($x, $y, $blur, $spread, $color, $inset :false) {
+    @if $inset {
+        @each $vendor in $vendors {
+            #{$vendor}box-shadow: inset $x, $y, $blur, $color;
+        }
+    }
+    @else {
+        @each $vendor in $vendors {
+            #{$vendor}box-shadow: $x $y $blur $spread $color;
+        }
+    }
+}
+
+//Backround-Image
+@mixin background-img($url, $bgSize, $bgPosition, $bgRepeat:no-repeat) {
+    background-image: url($url);
+    background-size: $bgSize;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+}
+
+//Linear-Gradient
+@mixin linear-gradient($direction, $from, $to) {
+    background: -webkit-linear-gradient($direction, $from 0%, $to 100%);
+    background: -moz-linear-gradient($direction, $from 0%, $to 100%);
+    background: -o-linear-gradient($direction, $from 0%, $to 100%);
+    background: linear-gradient($direction, $from 0%, $to 100%);
+}
+
+//Line Height -> Golden Ratio
+@mixin line-height($size) {
+    line-height: $size * 1.618;
+}
+
+//Font
+@mixin typoStyle($font, $size:12px, $weight:400) {
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    @include line-height($size);
+}
+
+// Links Fonts
+%link {
+    @include typoStyle($open, .8rem, 900);
+    color: $white;
+    text-transform: uppercase;
+}
+
+// H1 
+%main-title {
+    @include typoStyle($openExtraBold, 3.5rem, 900);
+    color: $white;
+    text-transform: uppercase;
+}
+
+// P in Main Section
+%main-paragragh {
+    @include typoStyle($openRegualr, 1rem, 500);
+    color: $white;
+    margin: $auto-margin;
+}
+
+%search-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: .7rem 2rem;
+    border-radius: 20px;
+    opacity: 0.6;
+    @include box-shadow(0px, 3px, 6px, 0, rgba(0, 0, 0, .16));
+}
+
+// Priper H3
+%priper-title-with-line {
+    @include typoStyle($openExtraBold, 2.857rem, 900);
+    color: $priper;
+    @extend %line;
+}
+
+%priper-title-without-line {
+    @include typoStyle($openExtraBold, 2.2rem, 900);
+    color: $priper;
+}
+
+// White H3
+%white-title-with-line {
+    @include typoStyle($openExtraBold, 2.857rem, 900);
+    color: $white;
+    @extend %line;
+}
+
+%white-title-without-line {
+    @include typoStyle($openExtraBold, 2.857rem, 900);
+    color: $priper;
+}
+
+%line {
+    &::after {
+        content: "";
+        display: block;
+        background: $secondary-color;
+        width: 10%;
+        height: .2rem;
+        margin: $auto-margin;
+        margin-top: .5rem;
+    }
+}
+
+@mixin btn {
+    border-radius: 50px;
+    padding: .3rem 1rem;
+    outline: 0;
+    @include typoStyle($openSemiBold, 1rem, 800);
+    margin: $auto-margin;
+    &:hover {
+        box-shadow: 0px 0px 20px rgba(221, 223, 226, 0.3);
+    }
+}
+
+%primary-btn {
+    @include btn;
+    background: $primary-color;
+    color: $white;
+}
+
+%secondary-btn {
+    @include btn;
+    @include border(2px, solid, $priper);
+    background: none;
+    color: $priper;
+    &:hover {
+        background: $priper;
+        color: $white;
+    }
+}
+
+%card {
+    border: 0;
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0px 0px 10px rgba(221, 223, 226, 0.09);
+}

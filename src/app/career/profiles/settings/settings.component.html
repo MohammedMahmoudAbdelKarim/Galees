@@ -1,0 +1,107 @@
+<!-- Start Setting Section -->
+<section class="settings">
+    <div class="container">
+        <div class="container-fluid">
+            <!-- Start First Card -->
+            <!-- Start Password Upadate -->
+            <div class="card p-3">
+                <div class="card-body">
+                    <h3>Change Password</h3>
+                    <p>you can change your password from here:</p>
+                    <!-- Start PasswordForm -->
+                    <form [formGroup]="passwordForm" (ngSubmit)="updatePassword(passwordForm)">
+                        <!-- Current Password -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="currentPassword">Current Password:</label>
+                                <br>
+                                <input formControlName="currentPassword" type="password">
+                                <div *ngIf="passwordForm.controls.currentPassword.errors?.required && passwordForm.controls.currentPassword.touched" class="alert alert-danger">
+                                    Please Enter Your Password</div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                        <!-- New Password -->
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="newPassword">New Password:</label>
+                                <br>
+                                <input formControlName="newPassword" type="password">
+                                <div *ngIf="passwordForm.controls.newPassword.errors?.pattern">
+                                    <div class="alert alert-danger">
+                                        Invalid Password
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <br>
+                                <input formControlName="confirmPassword" type="password">
+                                <div *ngIf="passwordForm.controls.confirmPassword.errors?.equalTo" class="alert alert-danger">
+                                    Passwords do not matched
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-3 text-center">
+                            <button class="mt-5" type="submit" [disabled]="!passwordForm.valid">Update Password</button>
+                        </div>
+                    </form>
+                    <!-- End PasswordForm -->
+                </div>
+            </div>
+            <!-- End First Card -->
+            <!-- End Password Upadate -->
+
+            <!-- Start Second Card -->
+            <!-- Start Email Upadate -->
+            <div class="card my-3">
+                <div class="card-body">
+                    <h3>Account Email</h3>
+                    <p>You're already registered with nourhan.hassan@gmail.com. You can change it and recieve emails on different address from here: </p>
+                    <!-- Start EmailForm -->
+                    <form [formGroup]="emailForm" (ngSubmit)="updateEmail(emailForm)">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="newEmail">New Email:</label>
+                                <br>
+                                <input formControlName="newEmail">
+                                <div *ngIf="emailForm.controls.newEmail.touched && emailForm.controls.newEmail.errors?.pattern" class="alert alert-danger">
+                                    Invalid Email
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="confirmEmail">Confirm Email:</label>
+                                <br>
+                                <input formControlName="confirmEmail">
+                                <div *ngIf="emailForm.controls.confirmEmail.errors?.equalTo && emailForm.controls.confirmEmail.touched" class="alert alert-danger">
+                                    Invalid Email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-3 text-center">
+                            <button class="mt-5" type="submit" [disabled]="!emailForm.valid" (click)="updateEmail($event)">Update your
+                Email</button>
+                        </div>
+                    </form>
+                    <!-- End EmailForm -->
+                </div>
+            </div>
+            <!-- End Second Card -->
+            <!-- End Email Upadate -->
+
+            <!-- Start Third Card -->
+            <!-- Start Delete Account -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3>Delete Account</h3>
+                    <p>Delete Account from here:</p>
+                    <div class="col-md-6 offset-3 text-center">
+                        <button class="delete" type="submit" (click)="deleteAccount($event)">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Third Card -->
+            <!-- End Delete Account -->
+        </div>
+    </div>
+</section>

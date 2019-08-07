@@ -1,0 +1,261 @@
+<!-- Start Header -->
+<header>
+    <main class="text-center">
+        <h1>FIND YOUR BABYSITTER</h1>
+        <p class="w-50 my-5">It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout content of a page when looking at its layout..</p>
+        <div class="main-action d-flex justify-content-center align-items-center">
+            <div class="search">
+                <input type="text" [(ngModel)]="sitter" class="mt-3" name="" (input)="searchIsActive($event)" placeholder="Search for a Sitter" id="">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </main>
+</header>
+
+<!-- End Header -->
+
+<!---Start  HOW IT WORKS--->
+<section id="work" class="text-center py-5">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="sectionHeadrWhite">
+                <h2 class="my-3 text-center">How It Works</h2>
+            </div>
+            <div class="row mt-5 text-center">
+                <div class="col-md-3 col-sm-6 my-sm-2">
+                    <div class="card py-5">
+                        <img class=" img-fluid" src="../../assets/img/loupe.svg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">SEARCH</h5>
+                            <p class="card-text">with us you can order and hire people to take care of you. It is a long established fact that a
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 my-sm-2">
+                    <div class="card py-5">
+                        <img class=" img-fluid" src="../../assets/img/selective.svg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">FILTER</h5>
+                            <p class="card-text">with us you can order and hire people to take care of you. It is a long established fact that a
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 my-sm-2">
+                    <div class="card py-5">
+                        <img class=" img-fluid" src="../../assets/img/rating.svg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">CHOOSE</h5>
+                            <p class="card-text">with us you can order and hire people to take care of you. It is a long established fact that a
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 my-sm-2">
+                    <div class="card py-5">
+                        <img class=" img-fluid" src="../../assets/img/checked.svg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">ORDER</h5>
+                            <p class="card-text">with us you can order and hire people to take care of you. It is a long established fact that a
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---End How IT WORKS--->
+
+<!---Start Sitters Profile--->
+<section id="profiles" class="text-center">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="sectionHeaderPriper">
+                <h2 class="my-3">Top Sitters Profiles</h2>
+            </div>
+            <div class="wrapper text-center mt-5">
+                <div class="row mt-5">
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-1.png">
+                        <h4>Nada Ahmed</h4>
+                        <p>Elderysitter</p>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-2.png">
+                        <h4>Alaa Mostafa</h4>
+                        <p>Babysitter</p>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-3.png">
+                        <h4>Amany Ali</h4>
+                        <p>Babysitter</p>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-4.png">
+                        <h4>Donia Mohamed</h4>
+                        <p>Babysitter</p>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-5.png">
+                        <h4>Mariam Hassan</h4>
+                        <p>Babysitter</p>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mt-3">
+                        <img class=" img-fluid img-profile" src="../../assets/img/profile-6.png">
+                        <h4>Amany Ali</h4>
+                        <p>Babysitter</p>
+                    </div>
+
+                </div>
+                <button class="btn see-more mt-3" [routerLink]="['/findBabySitter']">See More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!---End Sitters Profile--->
+
+<!---Start Services --->
+<section id="services">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="sectionHeadrWhite text-center">
+                <h2 class="my-3">Our Services</h2>
+            </div>
+            <div class="row my-5 align-items-start">
+                <div class="col-md-6">
+                    <img class=" img-fluid" src="../../assets/img/service-1.png">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-5">Childcare Services</h3>
+                    <ul class="mt-5 px-0 text-left">
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Take care of babies and children</li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>All aged of childcare services</li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Many baby care solutions </li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Total peace of mind</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row text-center align-items-center">
+                <div class="col-md-6 order-sm-1 order-1 order-md-1 order-lg-0 order-xl-0">
+                    <h3 class="mb-5 text-left">Childcare Services</h3>
+                    <ul class="mt-5 text-left p-0">
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Take care of babies and children</li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>All aged of childcare services</li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Many baby care solutions </li>
+                        <li class="mb-4"><i class="fas fa-check-circle mr-3"></i>Total peace of mind</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img class=" img-fluid" src="../../assets/img/service-2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---End Services --->
+
+<!---Start Reviews--->
+<section id="reviews">
+    <div class="sectionHeaderPriper text-center mb-5">
+        <h2 class="my-3">Clients Reviews</h2>
+    </div>
+    <owl-carousel [options]="carouselOptions">
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Ahmed Mohmoud</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img//rev-1.png" class="img-fluid" alt="...">
+        </div>
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Mona Mohmoud</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img/man2.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Hassan Elsayed</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img/man1.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Magdy Ali</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img/man3.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Laila Mohamed</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img/girl6.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="parent">
+            <div class="card mb-3">
+                <div class=" align-items-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Salama Ahmed</h3>
+                        <p class="card-text">"Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/img/girl10.jpg" class="img-fluid" alt="...">
+        </div>
+    </owl-carousel>
+
+</section>
+<!---End Reviews--->
+
+<!---Start How it easy--->
+<section id="video" class="text-center py-5 mb-5">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="sectionHeadrWhite">
+                <h2 class="my-3">See How it is Easy</h2>
+            </div>
+            <p class="my-5 w-50">Good services has saved my life lots of times already! We were in a rush to find a babysitter, and as soon as I searched I found great results. </p>
+            <div class="d-flex justify-content-center" poster="../../assets/img/poster.png" controls>
+                <video controls>
+                  <source src="assets/videos/GALEES.mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+<!---End How it easy--->
+<app-subscribe></app-subscribe>
